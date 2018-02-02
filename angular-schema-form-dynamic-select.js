@@ -394,6 +394,19 @@ angular.module('schemaForm').controller('dynamicSelectController', ['$scope', '$
         }
     };
 
+
+  /**
+   * PROBLEM: if we are inside a repeater (such as any array of form values), the insideModel is not correctly initialized
+   * SOLUTION: we know "item" is the data field for this, so only need to set value based on this + scope.form.key
+   * @param repeaterItem
+   */
+  $scope.extraInit = function(repeaterItem) {
+      if (repeaterItem) {
+        var attrName = _.last($scope.form.key);
+        $scope.insideModel = repeaterItem[attrName];
+      }
+    };
+
 }]);
 
 angular.module('schemaForm').filter('selectFilter', [function ($filter) {
