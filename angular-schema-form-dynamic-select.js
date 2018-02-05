@@ -360,7 +360,7 @@ angular.module('schemaForm').controller('dynamicSelectController', ['$scope', '$
         }
         else {
             if ($scope.insideModel && $scope.select_model.selected === undefined) {
-                $scope.select_model.selected = $scope.find_in_titleMap($scope.insideModel);
+                $scope.select_model.selected = $scope.find_in_titleMap($scope.insideModel).item;
             }
         }
     };

@@ -1,9 +1,9 @@
 {
   "name": "angular-schema-form-dynamic-select",
-  "version": "0.14.5",
+  "version": "0.15.1",
   "description": "Dynamic select add-on for angular schema form",
   "scripts": {
-    "build": "gulp default", 
+    "build": "gulp default",
     "test": "rm -fr coverage && ./node_modules/karma/bin/karma start --single-run --browsers PhantomJS karma.conf.js"
   },
   "author": "Nicklas Borjesson",
